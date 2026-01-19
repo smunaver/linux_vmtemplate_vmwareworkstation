@@ -116,3 +116,18 @@ Regenerate machine-id
 Regenerate SSH host keys
 
 Act like a brand-new system
+
+Fix it with:
+
+sudo ssh-keygen -A
+
+
+or, if the package state is broken:
+
+sudo dpkg-reconfigure openssh-server
+
+
+Then start SSH:
+
+sudo systemctl restart ssh
+sudo systemctl status ssh
